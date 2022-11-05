@@ -14,12 +14,11 @@ class AddDiscountIdAndDiscountPercentageAndTotalOnCheckoutsTable extends Migrati
     public function up()
     {
         Schema::table('checkouts', function (Blueprint $table) {
-            $table->foreignId('discount_id')->nullabel();
-            $table->unsignedInteger('discount_percentage')->nullabel();
+            $table->foreignId('discount_id')->nullable();
+            $table->unsignedInteger('discount_percentage')->nullable();
             $table->unsignedInteger('total')->default(0);
 
             $table->foreign('discount_id')->references('id')->on('discounts');
-
         });
     }
 

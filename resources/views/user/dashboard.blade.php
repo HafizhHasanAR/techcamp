@@ -9,7 +9,7 @@
                         DASHBOARD
                     </p>
                     <h2 class="primary-header ">
-                        My Bootcamps    
+                        My Bootcamps
                     </h2>
                 </div>
             </div>
@@ -32,9 +32,10 @@
                                 </td>
                                 <td>
                                     <strong>
-                                        {{$checkout->total}}
-                                        @if($checkout->discount_id)
-                                        <span class="badge bg-success">Disc {{$checkout->discount_percentage}}</span>
+                                        Rp. {{$checkout->total}}
+                                        @if ($checkout->discount_id)
+                                            <span class="badge bg-success">Disc {{$checkout->discount_percentage}}%</span>
+                                        @endif
                                     </strong>
                                 </td>
                                 <td>
@@ -46,7 +47,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="https://wa.me/083878694610?text=Hi, saya ingin bertanya tentang kelas {{$checkout->Camp->title}}" class="btn btn-primary">
+                                    <a href="https://wa.me/08xxxxxxxx?text=Hi, saya ingin bertanya tentang kelas {{$checkout->Camp->title}}" class="btn btn-primary">
                                         Contact Support
                                     </a>
                                 </td>
